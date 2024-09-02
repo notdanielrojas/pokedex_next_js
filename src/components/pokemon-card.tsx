@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 interface PokemonCardProps {
   id: number;
@@ -16,7 +17,7 @@ export function PokemonCard({ id, name, image, types }: PokemonCardProps) {
       rel='noopener noreferrer'
     >
       <h2 className='flex justify-end text-2xl font-semibold pr-5'>#{id}</h2>
-      <img src={image} alt={`Picture of ${name}`} />
+      <Image src={image} alt={`Picture of ${name}`} />
       <h2 className=' text-2xl font-semibold'>
         {name.charAt(0).toUpperCase() + name.slice(1)}
       </h2>
